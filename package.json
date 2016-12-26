@@ -1,0 +1,25 @@
+{
+  "name": "biojs-io-sample",
+  "version": "0.0.1",
+  "description": "A bio js sample app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appunnicer13/biojs-io-sample.git"
+  },
+  "keywords": [
+    "Bio",
+    "js",
+    "component",
+    "io"
+  ],
+  "author": "Appunni M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appunnicer13/biojs-io-sample/issues"
+  },
+  "homepage": "https://github.com/appunnicer13/biojs-io-sample#readme"
+}
