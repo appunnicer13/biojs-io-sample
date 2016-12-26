@@ -1,25 +1,44 @@
 {
   "name": "biojs-io-sample",
+  "description": "Biojs io sample for web components",
   "version": "0.0.1",
-  "description": "A bio js sample app",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/ApunniM/biojs-io-sample",
+  "author": {
+    "name": "ApunniM",
+    "email": "appunni.m.cer13@itbhu.ac.in"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/appunnicer13/biojs-io-sample.git"
+    "url": "git://github.com/ApunniM/biojs-io-sample.git"
   },
-  "keywords": [
-    "Bio",
-    "js",
-    "component",
-    "io"
-  ],
-  "author": "Appunni M",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/appunnicer13/biojs-io-sample/issues"
+    "url": "https://github.com/ApunniM/biojs-io-sample/issues"
   },
-  "homepage": "https://github.com/appunnicer13/biojs-io-sample#readme"
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+		"test": "mocha",
+		"build": "mkdirp build && browserify -r ./:biojs-io-sample -o build/sample.js",
+		"build-browser": "npm run build",
+		"prepublish": "npm run build",
+		"watch": "watchify -r ./:biojs-io-sample -v -o build/sample.js",
+		"w": "prunner \"npm run sniper\" \"npm run watch\"",
+		"sniper": "sniper ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+		"mkdirp": "^0.5.0",
+		"browserify": "6.x",
+		"sniper": "0.x",
+		"watchify": "^1.0.6",
+		"prunner": "1.x",
+		"chai": "1.x",
+		"mocha": "1.x"
+  }, 
+  "sniper": {
+    "js": [ "/build/sample.js"],
+    "snippets": ["examples"],
+    "first": "simple"
+   }, 
+  "keywords": ["biojs"]
 }
